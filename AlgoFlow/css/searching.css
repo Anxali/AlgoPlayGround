@@ -1,0 +1,171 @@
+/* Neon Background and Animation */
+body {
+    background: linear-gradient(10deg, #ff0066, #6600ff, #00ccff);
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 50px 0;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Title Styling with Neon Glow Effect */
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+    color: white;
+    text-shadow: 0 0 10px #ff0066, 0 0 20px #ff00ff, 0 0 30px #ff33cc, 0 0 40px #ff66ff;
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #ff0066, 0 0 20px #ff00ff, 0 0 30px #ff33cc, 0 0 40px #ff66ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff0066, 0 0 40px #ff00ff, 0 0 60px #ff33cc, 0 0 80px #ff66ff;
+    }
+}
+
+/* Container for the Content */
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Container Styling */
+.input-container {
+    margin-bottom: 20px;
+}
+
+/* Block Styling for Array Elements */
+.block {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Active Block Style */
+.block.active {
+    background-color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Found Block Style */
+.block.found {
+    background-color: #2ecc71;
+    color: #000;
+    box-shadow: 0 0 20px #2ecc71;
+}
+
+/* Not Found Block Style (Updated to indicate missing target visually) */
+.block.not-found {
+    background-color: #e74c3c;
+    color: #fff;
+    box-shadow: 0 0 15px #e74c3c;
+}
+
+/* Button Container Styling */
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* Button Styling */
+.button-container button {
+    background: #222;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Button Hover Effects */
+.button-container button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* Back Button Styling */
+.back-button {
+    background-color: #e74c3c;
+}
+
+.back-button:hover {
+    background-color: #c0392b;
+}
+
+/* Input Field Styling */
+.input-container input {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+/* Array Blocks Container Styling */
+#arrayBlocks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Optional Present Message Styling (only when target is found) */
+#Present {
+    color: #55ec23;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Flashing Effect for Not Found Block (Updated) */
+@keyframes flashNotFound {
+    0% {
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+}
+
+.block.not-found {
+    animation: flashNotFound 1.5s ease-in-out infinite;
+}

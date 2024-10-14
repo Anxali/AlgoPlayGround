@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack - DSA Playground</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Stack Operations</h1>
+        <p class="subtitle">Choose a stack operation:</p>
+
+        <div class="function-buttons">
+            <button class="neon-button" onclick="pushElement()">Push</button>
+            <button class="neon-button" onclick="popElement()">Pop</button>
+            <button class="neon-button" onclick="peekElement()">Peek</button>
+            
+        </div>
+
+        <div class="input-container">
+            <label for="stackInput">Enter Value:</label>
+            <input type="text" id="stackInput" placeholder="Enter value to push" />
+        </div>
+
+        <div class="controls">
+            <button class="neon-button" onclick="refreshPage()">Refresh</button>
+            <a href="../index.html"><button class="neon-button">Back</button></a>
+        </div>
+
+        <div id="displayArea"></div>
+
+        <div class="footer">
+            <p class="footer-text">Built with ❤️ by Anjali</p>
+        </div>
+    </div>
+
+    <script src="../js/stack.js"></script>
+</body>
+</html>

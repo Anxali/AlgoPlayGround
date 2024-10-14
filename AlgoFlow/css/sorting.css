@@ -1,0 +1,171 @@
+/* Neon Background and Animation */
+body {
+    background: linear-gradient(15deg, #4e54c8, #d319ca, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Title Styling with Neon Glow Effect */
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+    color: white;
+    text-shadow: 0 0 10px #ff0066, 0 0 20px #ff00ff, 0 0 30px #ff33cc, 0 0 40px #ff66ff;
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #ff0066, 0 0 20px #ff00ff, 0 0 30px #ff33cc, 0 0 40px #ff66ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff0066, 0 0 40px #ff00ff, 0 0 60px #ff33cc, 0 0 80px #ff66ff;
+    }
+}
+
+/* Controls for Buttons */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+button {
+    background: #222;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Button Hover Effects */
+button:hover {
+    background: #333;
+    border: 2px solid #8f94fb;
+    box-shadow: 0 0 20px rgba(143, 148, 251, 0.8);
+}
+
+/* Button Active Effects */
+button:active {
+    background: #444;
+    box-shadow: 0 0 25px rgba(143, 148, 251, 0.8);
+}
+
+/* Node Visualization Styling */
+#node-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    height: 200px;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    max-width: 80vw;
+    overflow-x: auto;
+}
+
+/* Node Styling */
+.node {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circular nodes */
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Sorted Node Styling */
+.node.sorted {
+    background-color: #69c455;
+}
+
+/* Active Node Styling */
+.node.active {
+    background-color: #ffb300;
+}
+
+/* Merge Node Styling */
+.node.merge {
+    background-color: #ff1493;
+}
+
+/* Refresh and Back Button Styling */
+#refreshButton, #backButton {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Refresh and Back Button Hover Effects */
+#refreshButton:hover, #backButton:hover {
+    background: #444;
+    border: 2px solid #8f94fb;
+    box-shadow: 0 0 20px rgba(143, 148, 251, 0.8);
+}
+
+/* Refresh and Back Button Active Effects */
+#refreshButton:active, #backButton:active {
+    background: #555;
+    box-shadow: 0 0 25px rgba(143, 148, 251, 0.8);
+}
+
+/* Array Input Field Styling */
+#arrayInput {
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #222;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}

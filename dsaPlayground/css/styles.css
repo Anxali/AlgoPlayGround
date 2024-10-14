@@ -1,0 +1,230 @@
+/* Resetting some styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #66b3ff, #ff99cc);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    transition: background 3s ease-in-out;
+}
+
+/* Animation for background gradient */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container styles */
+.container {
+    text-align: center;
+    border: 2px solid #4d79ff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px rgba(76, 121, 255, 0.8);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(76, 121, 255, 0.9);
+}
+
+/* Header Styling */
+h1 {
+    font-size: 3rem;
+    color: #4d79ff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'Impact', sans-serif;
+    text-shadow: 2px 2px 5px rgba(76, 121, 255, 0.8);
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #ffcc99;
+    text-shadow: 1px 1px 5px rgba(76, 121, 255, 0.8);
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+/* Pulse Animation for Header Text */
+@keyframes textPulse {
+    0% { text-shadow: 2px 2px 5px rgba(76, 121, 255, 0.8); }
+    50% { text-shadow: 5px 5px 10px rgba(76, 121, 255, 1); }
+    100% { text-shadow: 2px 2px 5px rgba(76, 121, 255, 0.8); }
+}
+
+/* Button Styling */
+button {
+    background-color: #4d79ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(76, 121, 255, 0.6);
+    background: linear-gradient(145deg, #4d79ff, #6a96ff);
+}
+
+button:hover {
+    background-color: #6a96ff;
+    box-shadow: 0 0 15px rgba(76, 121, 255, 0.9);
+    transform: scale(1.05);
+    animation: buttonGlow 1s ease-in-out infinite;
+}
+
+button:active {
+    background-color: #3b5bdb;
+}
+
+/* Button Glow Animation */
+@keyframes buttonGlow {
+    0% { box-shadow: 0 0 10px rgba(76, 121, 255, 0.6); }
+    50% { box-shadow: 0 0 25px rgba(76, 121, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(76, 121, 255, 0.6); }
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: 2px solid #4d79ff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Unordered List Styling */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+ul li {
+    font-size: 1.3rem;
+    color: #ffcc99;
+    text-shadow: 1px 1px 3px rgba(76, 121, 255, 0.8);
+    padding: 5px;
+}
+
+/* Display Area Styling */
+#displayArea {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(76, 121, 255, 0.7);
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Neon Border for Queues */
+.queue input[type="text"] {
+    border: 2px solid #66ffcc;
+}
+
+.queue button {
+    background-color: #66ffcc;
+}
+
+.queue button:hover {
+    background-color: #33cc99;
+}
+
+/* Queue Specific Styles */
+.queue li {
+    font-size: 1.2rem;
+    color: #66ffcc;
+    text-shadow: 2px 2px 3px rgba(102, 255, 204, 0.8);
+    padding: 5px;
+}
+
+/* Styles for Individual Data Structures */
+.stack, .linkedList, .bst, .graph, .queue {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(76, 121, 255, 0.7);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stack:hover, .linkedList:hover, .bst:hover, .graph:hover, .queue:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(76, 121, 255, 0.8);
+}
+
+/* Back Button Styling */
+.back {
+    background-color: #ffcc99;
+    color: white;
+}
+
+.back:hover {
+    background-color: #ff9966;
+}
+
+/* Refresh Button Styling */
+.refresh {
+    background-color: #ff6666;
+    color: white;
+}
+
+.refresh:hover {
+    background-color: #ff3333;
+}
+
+/* Button Hover Transitions */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(76, 121, 255, 0.8);
+}
+
+/* Header Text Styling */
+h1, h3 {
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(76, 121, 255, 0.9);
+}

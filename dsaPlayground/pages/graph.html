@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Graph</h1>
+
+        <input type="text" id="graphInput" placeholder="Enter vertex">
+        <button onclick="addVertexGraph()">Add Vertex</button>
+        <input type="text" id="vertex1" placeholder="Enter vertex 1">
+        <input type="text" id="vertex2" placeholder="Enter vertex 2">
+        <button onclick="addEdgeGraph()">Add Edge</button>
+        <button onclick="refreshGraph()">Refresh</button>
+        <a href="../index.html"><button class="neon-button">Back</button></a>
+
+        <div id="displayArea"></div>
+    </div>
+
+    <script src="../js/graph.js"></script>
+</body>
+</html>
